@@ -1,0 +1,160 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Form for project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<h1 id = "title">Tell us your product ideas</h1>
+
+<div id = "wrapper">
+<p id = "description">This form lets us track ideas from our contributors just pop in your info and we'll get back to you.</p>
+
+<form id = "survey-form">
+
+  <label id="name-label" for = "name">Name </label>
+
+  <input id = "name" name = "name" type = "text" placeholder = "enter your name" required>
+
+  <label id="email-label" for = "email">Email </label>
+  <input id = "email" name = "email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Enter your email" required>
+
+  <label id="number-label" for = "number">Name </label>
+  <input id = "number" name = "number" type= "number"  min= 1 max = 100 placeholder = "number">
+
+<fieldset>
+  <legend>What is your idea about:</legend>
+  <div>
+    <input type="radio" id="huey" name="drone" value="code" checked />
+    <label for="code">Code</label>
+  </div>
+
+  <div>
+    <input type="radio" id="data" name="drone" value="Data" />
+    <label for="data">Data</label>
+  </div>
+
+  <div>
+    <input type="radio" id="courses" name="drone" value="louie" />
+    <label for="courses">Courses</label>
+  </div>
+
+</fieldset>
+
+  <label for = "dropdown">Can we use your idea for a case study?</label>
+  <select id = "dropdown" name = "dropdown">
+    <option value="Yes">Yes</option>
+    <option value="No">No</option>
+
+  </select>
+
+
+
+
+
+<fieldset>
+    <legend>Contact preferences:</legend>
+
+  <label for = "contact">Please contact me?</label>
+
+<input 
+name = "contact" 
+type = "checkbox" 
+value = "contact-consent">
+
+
+<label for = "contact" 
+>Please send me a status update?</label>
+
+<input 
+name = "contact" 
+type = "checkbox"
+value = "status-consent">
+
+</fieldset>
+
+<textarea id = "textbox" cols = "50" rows = "10" placeholder = " your idea..."></textarea>
+
+
+<input id = "submit" type="submit" value="Submit">
+
+
+
+</form>
+</div>
+</body>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  width:90vw;
+  }
+
+h1{
+  width:80%;
+  margin:auto;
+  margin-top:1vh;
+  margin-bottom:1.5vh;
+
+}
+
+#wrapper{
+  width:90%;
+  background-color:green;
+  border-radius: 20px;
+  padding:5%;
+  display:flex;
+  flex-direction:column;
+}
+
+#survey-form > #submit{
+  width:20%;
+  height:4vh;
+  margin:auto;
+}
+
+#wrapper > p{
+  font-size:large;
+}
+
+#survey-form{
+  display:flex;
+  flex-direction:column;
+}
+
+#survey-form > input{
+  width:80%;
+  margin:auto;
+  margin-bottom:2vh;
+  border-radius:5px;
+}
+
+#survey-form > select{
+  width:80%;
+  margin:auto;
+  margin-bottom:2vh;
+  border-radius:5px;
+}
+
+#survey-form>label{
+  margin-left:5%;
+}
+
+#textbox{
+  height:20vh;
+  margin-bottom:2vh;
+}
+
+fieldset{
+  margin-bottom:1vh;
+}
+
+** end of undefined **
+

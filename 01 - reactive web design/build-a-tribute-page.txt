@@ -1,0 +1,94 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>My inspiration: Arnold Schwarzenegger</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+<main id= "main">
+    <h1 id = "title"> Arnold Schwarzenegger</h1>
+    <p>Lifter Actor Dreamer</p>
+    <div id = "img-div">
+      <img 
+        id = "image" 
+        src = "https://upload.wikimedia.org/wikipedia/commons/thumb/a/af/Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg/1200px-Arnold_Schwarzenegger_by_Gage_Skidmore_4.jpg"
+        alt = "arnold is king!">
+
+<div id = "img-caption"><p >
+  Arnold is a shining example to use all through his tenacity, grit and imagination
+  </p>
+  </div>
+    </div>
+
+
+<div id = "tribute-info">
+  <ul>
+    <li>info on Arnie</li>
+  </ul>
+
+</div>
+
+<p> read more about Arnie <a id = "tribute-link" href = "https://en.wikipedia.org/wiki/Arnold_Schwarzenegger" target = "_blank">here </a> </p>
+</main>
+
+</body>
+
+** end of undefined **
+
+** start of undefined **
+
+body{
+  background-color:grey;
+}
+
+main{
+  width:90%;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  align-items: center;
+  justify-content: center;
+  border-style:solid;
+}
+
+h1{
+  width:70%;
+  /* margin-left:15%; */
+  border-style:solid;
+  text-align:center;
+}
+
+main p{
+  width:60%;
+  /* margin:auto; */
+  text-align:center;
+  border-style:solid;
+  }
+
+#img-div{
+  width:80%;
+  border-style:solid;
+}
+
+#img-div > div > p{
+  width:80%;
+  margin:auto;
+  margin-top:1px;
+  margin-bottom:1px;
+  border-style:solid;
+}
+
+img{
+  max-width:100%;
+  display:block;
+  width:80%;
+  margin:auto;
+}
+
+** end of undefined **
+

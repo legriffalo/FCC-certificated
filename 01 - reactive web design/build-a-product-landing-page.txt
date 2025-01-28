@@ -1,0 +1,133 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Buy a Dobby</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel ='stylesheet' href="styles.css">
+
+</head>
+
+<body>
+
+<header id = "header">
+
+<img id = "header-img" src = "https://cdn4.iconfinder.com/data/icons/harry-potter/100/final_collection-14-512.png">
+
+<nav id = "nav-bar">
+      <h2> TRY THE DOBBY LIFE </h2>
+    
+
+      <a class = "nav-link" href = "#Features"> 
+        Features</a>
+      <a class = "nav-link" href = "#Pitch"> 
+        Pitch</a>
+      <a class = "nav-link" href = "#Pricing"> 
+        Pricing</a>
+      
+  </nav>
+
+
+</header>
+
+<div id = "main">
+
+<form id = "form" action = "https://www.freecodecamp.com/email-submit">
+   <label id="email-label" for = "email">Email </label>
+  <input id = "email" name = "email" type="email" pattern="[^ @]*@[^ @]*" placeholder="Enter your email" required>
+
+  
+<input id = "submit"  type="submit" value="Submit">
+
+</form>
+
+  <iframe id = "video"  src="https://www.youtube.com/embed/_vutMU7tNHs?si=RO6bFrxIDyAGS9Gm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+<div class = "speel" id = "Features">
+      <ul>
+
+  <li><b>Unlimited Freedom Action!</b><br>
+    Pose Dobby in a variety of freedom-inspired stances! Whether he’s <em>dancing</em>, <em>jumping</em>, or <em>sobbing</em>, he’s always living his best life!<br>
+    Watch as he refuses to perform simple tasks like <em>house cleaning</em>, <em>laundry</em>, or <em>working for your toys</em>!
+  </li>
+  
+ <li><b>Power Pose Cuddling Mode!</b><br>
+    Activate “Cuddling Mode” and watch Dobby curl up in a heap for hours, sobbing about freedom... until you touch him again.
+  </li>
+  <li><b>Exclusive “Sock Delivery” Feature!</b><br>
+    Dobby can hold the magical sock of your choice (just stick any sock in his hand), but don’t expect him to <em>give it away</em> like he did in the movies... this elf is clingy!
+  </li>
+
+</ul>
+  </div>
+
+
+
+<div class = "speel" id = "Pitch">
+
+Imagine a home run by Dobby the House Elf—where no chore is too small, and no task is too tedious! With Dobby, your laundry will always be folded (though not necessarily the way you want), your dishes washed (unless they're a bit too dirty), and your floors swept... eventually. He’s loyal, he’s free, and he definitely won’t take orders from you. Embrace the chaos and let Dobby add a touch of magic (and mayhem) to your daily routine—just be sure to keep a sock handy!
+
+
+  </div>
+
+<div class = "speel" id = "Pricing">
+  <h2> FREE - please take him off our hands! </h2></div>
+</div>
+</body>
+
+** end of undefined **
+
+** start of undefined **
+
+@media (width <= 500px) {
+  /* … */
+  font-size:medium;
+}
+
+body{
+  background-color:grey;
+}
+
+
+#header{
+  display:flex;
+  flex-direction:row;
+  width:100%;
+  box-sizing: border-box;  
+  height:10vh;
+  border-style:solid;
+    position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+#main{
+ width:90%;
+
+ border-style:dashed;
+ margin:auto;
+ margin-top:15vh;
+ display:flex;
+ flex-direction:column;
+
+}
+
+#video{
+  width:60vw;
+  height:40vh;
+  margin:auto;
+  margin-top:2vh;
+}
+
+.speel{
+  border-style:solid;
+  width:90%;
+  margin:auto;
+  margin-top:1vh;
+}
+
+** end of undefined **
+

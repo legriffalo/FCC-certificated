@@ -1,0 +1,109 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Portfolio</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body>
+    <header>
+
+      <nav id = "navbar">
+        <a class = "nav-link" href = "#Introducing_powerBI"> 
+          Introducing powerBI</a>
+        <a class = "nav-link" href = "#Loading_data"> 
+          Loading data</a>
+        <a class = "nav-link" href = "#Transforming_data"> 
+          Transforming data</a>
+        <a class = "nav-link" href = "#Basic_visualisation"> 
+          Basic visualisation</a>
+        <a class = "nav-link" href = "#Using_DAX"> 
+          Using DAX</a>     
+      </nav>
+
+  </header>
+
+
+
+
+  <div id= "main">
+
+    <section id = "welcome-section">
+      <h1>Hey ... I'm GRIF </h1>
+    </section>
+
+    <section id = "projects">
+      <div class = "project-tile">
+        <a href = "https://github.com/legriffalo"> check it out </a>
+      </div>
+    </section>
+
+    <section id = "profile-links">
+      <a id = "profile-link" target = "_blank" href = "https://www.linkedin.com/in/nick-griffiths-7b139198/">LI</a>
+    </section>
+
+  </div>
+
+** end of undefined **
+
+** start of undefined **
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+
+
+header{
+  position:fixed;
+  top:1vh;
+  left:5%;
+  height:12vh;
+  width:90%;
+  border-style:solid;
+  display:flex;
+  flex-direction:row;
+  justify-content: center;
+  align-items:center;
+  background-color:grey;
+}
+
+#navbar{
+  height:12vh;
+ 
+}
+navbar > a{
+
+}
+
+#main{
+  top:10vh;
+
+}
+
+section{
+  height:100vh;
+  width:95vw;
+}
+
+#welcome-section{
+  background-color:black;
+}
+
+#projects{
+    background-color:grey;
+}
+
+#profile-links{
+    background-color:black;
+}
+
+** end of undefined **
+

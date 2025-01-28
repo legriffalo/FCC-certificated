@@ -1,0 +1,278 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>A bit about powerBI</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="styles.css">  
+</head>
+
+<body>
+
+<div id = "main-doc">
+
+  <nav id = "navbar">
+    <header>
+      <h2>Navigate this doc</h2>
+    
+
+      <a class = "nav-link" href = "#Introducing_powerBI"> 
+        Introducing powerBI</a>
+      <a class = "nav-link" href = "#Loading_data"> 
+        Loading data</a>
+      <a class = "nav-link" href = "#Transforming_data"> 
+        Transforming data</a>
+      <a class = "nav-link" href = "#Basic_visualisation"> 
+        Basic visualisation</a>
+      <a class = "nav-link" href = "#Using_DAX"> 
+        Using DAX</a>
+        
+    </header>
+  </nav>
+
+  <section id = "Introducing_powerBI" class = "main-section">
+    <header>
+      <h1>Introducing powerBI</h1>
+    </header>
+    <p>This site will document some fun tips and tricks with powerBI. </p>
+    
+    
+    <p>Power BI is a powerful business analytics tool developed by Microsoft that allows users to visualize and share insights from their data.     
+      You can use it to turn raw data into data models that power interactive reports and dashboards. 
+      
+      PowerBI makes it easier to analyze trends, track performance, and make data-driven decisions.
+      
+      Power BI can connect to a wide range of data sources, from spreadsheets to cloud services, and transform complex data into clear, actionable insights.</p>
+
+    <img alt = "powerBI icon" src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJQAAACUCAMAAABC4vDmAAAAnFBMVEX/////wQchISH/vAD/6LX/vgD/14IAACMeHyH/wwb/xQX/zAAABSIvKiD3vQYbHSHmrwyqgxfHmRBhTh3rswkvKCE5LSARGCEACCEAECL/+Of/8db/7cr/xzr/9Nz/wRr/y0//3pz/0F8MFSKifhb/5KtaSB1qUxwnJSC7kBOGaRnUpQ47Mh+PbhlFOR9vWRt6YBpPPh6XdBccGSE+qUMYAAAEEUlEQVR4nO2b23aqMBCGi7aGjBpAkENPtoWKiNrWvv+7bUnQ2g200qQyqyv/nSuSfAxJGDIzFxdaWlpaWlpaWlpaWlo/0vXN7eUZdHtzfTLS7eDO6J9Fxt3g9iSk+6f+lXE2XfWf7k8w0+yMSBxr9q2xLs+MxLEuv3l2s/MzGcbs6yf40IGhdqZ6+PLh9btgMoz+Vw/wrhsmw7hrZrrpZEYVmt00Qj13MqO4nhuhHjuDunpshBp0BzXQUBpKQ9WLwhAMJqddF1QhFAUve1mNJbVKM68Jqz0UsGRMYsuUlBWT6ZaBGijIV5HVUyIrGk9qqdpCQRYEapA4VpjVUbWEgkmgyExCZlRH1Q6KsrGwkzUisio76nnV2d4OCpYhv7/YdWxJZWlsFn1FL1VTtYKi9lh0lDCgkgLqREVn5iKvmKoVFCTcUCQbVudBew0z3lu4rZiqHVQa73oJ0satuJ2o6G4uCRUUBg/qN5f2gglfyUQSivBJYKuylD0tbpIwKSjGoaY1i/hnYj6HqvSnoXYOxifHAAUU2E6S04+rEUBReCVkRN68w2rDALUe8dfB/LDauoeieSg8A+LsTdU9FDgjARWn+7cUIqjA1VAaSkP9AhSlTY2dQQGzba8BqyuoYZ4urNW6/oigIyg6iQPTtEK34kp2CMXexAdm6NQ58d1A0ZyUo77hgYJJCWWNMUJNMUKhtBRuKChEcUFBlo432/JDAQkUbMPYCsI38X8cUCCOenpRigmKn/QcRkUCNS7PbAk/O0ICNcUIhdJSnUHBcHjYKZFAUS97XU4YxQQF+ZTEEXEFFQ4oaq+4qxm9MDxQkJTDhDxogANqeNiyuVOOBMotQ3+jvwj1/zg/iDj0ckVQ1FMRcYBFMUy8D2bKQkFWXG9GSqJYc1VQ/HrpKFYW8UHWoAIKEv7/qPo93S4yKiZBL1irgNryDcXsVYNiLWPI4uZMwl8sUlCUEX6DNYHRtikAzOccIZO3FOMefLCQjrYbYPMcAGVQ1iKXzksoHIMgVgcVxLWh3/a5Lp47CtRAWWRuK8l1KWZotlEz0X1HVVZQ0T3kKiw1oU1R+5+lv4kF0wg1PekTqzmRQCYnT9pL+BWoZXQ8KrVLqNgVUPOSmdifHNNo+ZtQNBeJPdZGeETMFZ5omRN1OOBwxdP2VtxyZlzNuFEIZdAkDCwrfi9HobYfWVYwWu7bl0Vz5JcvN5q/x0Vz8m1oRy7Pc5i9+KvXw6YM3nrju87+7I6C4/qb9SG6Dvnryk9PSCmSTD4FypjxceeUFhmcR827n0ehGmrsfp6QvfN3MmI11GehLCdAWXiBskQFZTEPzrInlAViOEvpUBYd4izP7KCQ9Yvd4NhY+Ep+CyEsjtbS0tLS0tLS0tLS0vqkf76Tw0GbX5uqAAAAAElFTkSuQmCC">
+
+
+  <p>
+    Check out the sections in this doc to find out more.
+  </p>
+
+  </section>
+
+   <section id = "Loading_data" class = "main-section">
+    <header>
+      <h1>Loading data </h1>
+    </header>
+    <p>Power BI can work with a bunch of different data types, making it super flexible for any project. It can pull data from simple Excel sheets, huge databases, and even cloud services like Google Analytics or Azure. Whether it's structured data like numbers and dates, or unstructured data like text and images, Power BI can handle it. Plus, it supports live data connections, so you’re always working with the freshest info. It’s all about making your data easy to explore and analyze.</p>
+
+<h3>Some prevalent data-sources in powerBI development</h3>
+
+  <ul>
+    <li>Excel sheets</li>
+    <li>Databases</li>
+    <li>Cloud services (e.g., Google Analytics, Azure)</li>
+    <li>Structured data (numbers, dates)</li>
+    <li>Unstructured data (text, images)</li>
+    <li>Live data connections</li>
+  </ul>
+
+<p>Loading data into Power BI is pretty straightforward. First, you just click on the "Get Data" button, and then choose your data source—whether it’s an Excel file, a database, or even a web service. After selecting the source, Power BI will guide you through picking the right tables or data you want to work with. Once you've selected what you need, hit "Load," and your data pops right into Power BI. You can then start transforming it, if needed, and dive straight into building your reports and visuals!</p> 
+
+
+<ol>
+  <li>Click on "Get Data."</li>
+  <li>Choose your data source (Excel, database, etc.).</li>
+  <li>Select the tables or data you want to use.</li>
+  <li>Click "Load" to bring the data into Power BI.</li>
+  <li>Start transforming and building reports with your data.</li>
+</ol>
+
+<h2> Here are some of the skills I have found most useful </h2>
+
+<h3>Loading simple data from Excel</h3>
+
+
+<h3>Loading data from the web </h3>
+
+<h3>Loading data from databases </h3>
+
+  </section>
+
+   <section id = "Transforming_data" class = "main-section">
+    <header>
+      <h1> Transforming data </h1>
+    </header>
+
+    <p>Transforming data in Power Query Editor is where the <b>TRUE</b> magic happens in Power BI. The best part is that all the changes are tracked, so you can go back and adjust things anytime. Once you're happy with how the data looks, just hit "Close & Load," and you're ready to start analyzing!</p>
+
+<ul>
+  <li>Clean up and shape your data for reports</li>
+  <li>Filter out unwanted rows</li>
+  <li>Change column names</li>
+  <li>Combine tables</li>
+  <li>Split data into different parts</li>
+  <li>Track all changes made for easy adjustments</li>
+  <li>Load the data into Power BI for analysis</li>
+</ul>   
+
+
+
+<p>M language, or M Query, takes Power Query Editor to the next level by allowing you to write custom transformations and automate complex data processes. It’s a powerful scripting language that gives you full control over your data transformations, letting you do things that might be tricky through the regular interface. If you're into advanced customizations, M Query is definitely your go-to!</p>
+
+  
+    <code>
+  let 
+  Source = YourDataSource,
+  SplitColumns = Table.SplitColumn(Source, "double-barreled", Splitter.SplitTextByDelimiter("-", QuoteStyle.Csv), {"double", "barrell"})
+
+in
+    SplitColumns
+
+    </code>
+
+        <p>Using the stock tools and Mlanguage's powerful suite of functions you can rapidly and powerfully transform data in to useable data maodels.</p>
+    
+  </section>
+
+   <section id = "Basic_visualisation" class = "main-section">
+    <header>
+      <h1> Basic visualisation</h1>
+    </header>
+
+    <p>Visualizations in Power BI allow you to turn your data into interactive charts, graphs, and dashboards. They help you quickly spot trends, compare values, and communicate insights in a clear and engaging way. With a wide variety of visualization types, you can choose the best way to represent your data for easy analysis.</p>
+
+<h3> How to start out building visualisations in powerBI</h3>
+
+  </section>
+
+   <section id = "Using_DAX" class = "main-section">
+    <header>
+      <h1> Using DAX</h1>
+    </header>
+
+        <p>DAX (Data Analysis Expressions) is a formula language used in Power BI to create custom calculations and aggregations. It helps you analyze and manipulate data by creating measures, calculated columns, and tables. DAX is similar to Excel formulas but designed for more powerful data modeling and analysis in Power BI.</p>
+
+<p> example 1:</p>
+
+    <code>
+Sales in 2023 = CALCULATE(SUM(Sales[Amount]), Sales[Year] = 2023)
+
+    </code>
+
+<p> example 2:</p>
+
+    <code> <pre>
+    Average Sales = 
+    VAR TotalSales = SUM(Sales[Amount])
+    VAR SalesCount = COUNTROWS(Sales)
+    RETURN 
+        TotalSales / SalesCount
+
+    </pre>
+    </code>
+
+<p> example 3:</p>
+
+  <code>
+    <pre>
+YTD Sales = 
+CALCULATE(
+    SUM(Sales[Amount]),
+    DATESYTD(Sales[Date])
+)
+    </pre>
+    </code>
+
+<p> example 4:</p>
+
+  <code>
+    <pre>
+Running Total Sales = 
+CALCULATE(
+    SUM(Sales[Amount]),
+    FILTER(
+        ALL(Sales[Date]),
+        Sales[Date] <= MAX(Sales[Date])
+    )
+)
+    </pre>
+    </code>
+
+
+</section>
+
+</div>
+
+</body>
+
+** end of undefined **
+
+** start of undefined **
+
+@media (width <= 500px) {
+  /* … */
+  font-size:medium;
+}
+
+
+
+body{
+  background-color:black;
+}
+
+code{
+  color:green;
+}
+
+header{
+  margin-top:1vh;
+  margin-bottom:1vh;
+}
+
+header > h2{
+  margin-bottom:1vh;
+}
+
+#navbar{
+  width:96%;
+  margin:auto;
+  color:#D1CFC8;
+  border-style:solid;
+
+}
+
+#navbar > header > a{
+  display:block;
+  box-sizing: border-box;  height:3vh;
+  width:98%;
+  margin:auto;
+  border-style:solid;
+  color:#D1CFC8;
+  text-align:center;
+  text-decoration:none;
+}
+
+.main-section{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  border-style:solid;
+  color:#D1CFC8;
+  padding:20px;
+  width:90%;
+  margin:auto;
+}
+.main-section > h1,h2,h3,h4{
+  width:80%;
+  margin:auto;
+  margin-top:1vh;
+  text-align:center;
+}
+.main-section > p{
+  font-size:large;
+  font-weight:500;
+  
+}
+.main-section > img{
+   width:50%;
+   border-style:red;
+}
+
+** end of undefined **
+

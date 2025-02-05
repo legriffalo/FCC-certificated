@@ -1,0 +1,95 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Palindrome checker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+<div id = "wrapper">
+
+  <input id = "text-input" type= "text-input" placeholder = "check for palindromes?"> 
+  <button id = "check-btn"> Check</button>
+
+
+<span id = "result">
+  </span>
+
+</div>
+
+</body>
+  <script src = "script.js"></script>
+
+
+
+** end of undefined **
+
+** start of undefined **
+
+const btn = document.getElementById("check-btn");
+const input = document.getElementById("text-input");
+const result = document.getElementById("result");
+
+
+
+function checkPalindrome(val){
+  let inverted = "";
+  let testval = val.toLowerCase();
+  testval = testval.replaceAll(",","")
+  testval = testval.replaceAll(".","")
+  testval = testval.replaceAll("_","")
+  testval = testval.replaceAll(" ","")
+  testval = testval.replaceAll("-","")
+  testval = testval.replaceAll("(","")
+  testval = testval.replaceAll(")","")
+
+
+
+
+
+  result.innerHTML = "";
+
+
+  for(let i = 0;i<testval.length;i++){
+    inverted += testval[testval.length -1 -i]
+  }
+
+  if(inverted == testval){
+    result.innerHTML += `${val} is a palindrome`
+  }
+  else{
+    result.innerHTML += `${val} is not a palindrome`
+
+  }
+  
+  alert(testval+ " " + inverted)
+
+}
+
+// checkPalindrome(val)
+
+
+
+
+btn.addEventListener("click",(e)=>{
+  if(input.value){
+    checkPalindrome(input.value)}
+    else{
+      result.innerHTML = "Please input a value"
+      alert("Please input a value")}
+
+})
+
+** end of undefined **
+
+** start of undefined **
+
+
+
+** end of undefined **
+

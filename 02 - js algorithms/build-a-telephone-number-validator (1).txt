@@ -1,0 +1,294 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>ATN checker</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+    
+    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style type= "text/tailwindcss">
+
+
+        :root {
+        --bg-img: url('https://img.freepik.com/free-vector/horizontally-vertically-seamless-abstract-vector-pattern_8130-2835.jpg?semt=ais_hybrid');
+        --primary:#6C596E;
+        --banner:#32021F;
+        --btnh:#32021F;
+        --btn:#A63446;
+
+    }
+
+
+        .wrapper {
+          @apply h-screen text-gray-800 size-full flex items-center justify-center bg-repeat bg-[url:var(--bg-img)] text-xs md:text-xl;
+                }
+
+    .banner{
+    @apply fixed top-0 h-15/100 w-full flex justify-center items-center text-white  bg-[color:var(--banner)] text-3xl font-sans ;
+    
+    }
+        .inner-div {
+          @apply w-80/100 h-50/100 border-solid bg-[color:var(--primary)]  rounded-4xl flex flex-col;
+        }
+
+        .fw {
+        @apply block w-full h-50/100 
+        flex items-center justify-center    bg-transparent p-2 ;
+        }
+
+        .input{
+          @apply h-50/100 w-70/100 bg-gray-800 rounded-3xl text-gray-100 placeholder-white px-8;
+        }
+
+        .btn{
+        @apply h-50/100 w-15/100 text-center rounded-xl text-white bg-[color:var(--btn)] hover:bg-[color:var(--btnh)] ml-2 p-0;
+        }
+
+        .result{
+        @apply text-white text-2xl;}
+
+
+        .footer{
+        @apply fixed bottom-0 h-8/100 w-full flex items-center bg-[color:var(--banner)] text-white;
+        }
+        .footer > a {
+        @apply m-2
+        }
+
+    </style>
+
+
+
+
+</head>
+
+<body>
+
+<div id = "wrapper" class = "wrapper">
+  <div class = "banner">
+    <h1> Check a US number </h1>
+  </div>
+
+<div class = "inner-div">
+  <div id = "inputs" class = "fw">
+
+      <input id = "user-input" class = "input" type = "text" placeholder = "enter a number..." ></input>
+
+      <button id = "check-btn" class = "btn">check</button>
+      <button id = "clear-btn" class = "btn">clear</button>
+  </div>
+
+<div id ="outputs" class = "results fw">
+  <p id = "results-div">
+    
+  </p>
+</div>
+</div>
+
+
+<div class = "footer">
+<a href = 'https://github.com/legriffalo' target = "_blank">
+<i class="fa-brands fa-github"></i>
+</a> 
+
+<a href = 'https://www.linkedin.com/in/nick-griffiths-7b139198/' target = "_blank" >
+<i class="fa-brands fa-linkedin-in"></i>
+</a>
+
+</div>
+</div>
+
+</body>
+<script src = "script.js"></script>
+
+** end of undefined **
+
+** start of undefined **
+
+// // js for site
+let checkBtn = document.getElementById("check-btn");
+let input = document.getElementById("user-input");
+let output = document.getElementById("results-div");
+let resultsDiv = output;
+let userInput = input;
+let clear = document.getElementById("clear-btn");
+
+
+// function checkBrackets(val){
+//   let stack = [];
+//   let pairs = {
+//               "(":")",
+//               "[":"]",
+//               "{":"}"
+//             }
+//   //iterate whole string from 0 up
+//   for(let char of val){
+
+//     // if the character is in pairs add to stack and check
+//     if(pairs[char]){
+//       stack.push(char);
+//     }
+//     // if it's a closing bracket check it closes of a set
+//     else if(Object.values(pairs).includes(char)){
+//       if(pairs[stack.pop()] !== char){
+//         console.log("failed at 6")
+//         return false
+//       }
+//     }
+
+//   }
+//   //return true if no stack left after passing through string
+//   return stack.length === 0;
+// }
+
+// function checkBracketLength(val){
+//   // check for log sections between brackets
+//   let brack = val.split(")");
+//   let sections = [];
+//   for(let section of brack){
+//     section = section.replace("(","");
+//     section = section.replace(" ","");
+
+//     console.log(section.length);
+//     sections.push(section.length);
+//   }
+  
+//   if(sections[0]>4){
+//     console.log("failed on sections check")
+//     console.log(sections)
+    
+//     return false;}
+
+//   return sections
+// }
+
+// function checks(val){
+//   let pass = true
+//   let matches = val.match(/\d+/g);
+//   let testVal = matches.join('');
+//   // alert(matches.length)
+//   // alert(testVal)
+//   // alert(testVal.length)
+//   //checks with numbers
+//   // 1. check length too big
+//   if(testVal.length > 11){
+//     console.log("failed at 1");
+//     pass = false;
+//   }
+//   // 2. check too short
+//   if(testVal.length < 10){
+//     console.log("failed at 2");
+//     pass = false;
+//   }
+//   // 3. check 11 with leading 1
+//   if(testVal.length==11 && testVal[0]!=1){
+//     console.log("failed at 3");
+//     pass = false;
+//   }
+//   // 4. if 10 no 1
+//   if(testVal.length == 10 && testVal[0]==1){
+//     console.log("failed at 4");
+//     pass = false;
+//   }
+
+//   // 5. check first character
+//   if(isNaN(val[0]) && val[0]!="("){
+//     console.log("failed at 5");
+//     pass = false;
+//   }
+
+//   // 6. check matching brackets
+//   checkBrackets(val)? null:pass = false;
+
+//   // 7.check format 1-3-3-4
+//   if(testVal.length >10 && matches.length > 4){
+//     console.log("failed at 7");
+
+//     pass = false;
+//   }
+//   // 8.check format 3-3-4
+//   if(testVal.length == 10 && matches.length > 3){
+//     console.log("failed at 8");
+
+//     pass = false;
+//   }
+
+//   console.log(checkBracketLength(val))
+
+//   if(val.includes("(")){
+//     checkBracketLength(val)? null:pass=false;
+//   }
+  
+
+
+
+//   return pass
+// }
+
+
+
+
+
+
+  function check(){
+    let val = input.value;
+    let message = '';
+    if(val){
+      if(final.test(val)){
+        message = `Valid US number: ${val}`; 
+        }
+      // catch invalid numbers
+      else{
+        message = `Invalid US number: ${val}`;
+      }
+    }
+            
+
+    else{
+      message = 'Please provide a phone number'
+      alert(message);
+    }
+
+  return message
+  }
+
+
+// const country = '^(1\\s?)?';
+// const area = '[\\s\\-]?(\\([0-9]{3}\\)|[0-9]{3})[\\s\\-]?';
+// const punct = '[\\s\\-]?';
+// const end = '[0-9]{3}[\\s\\-]?[0-9]{4}$';
+
+// const all = `/${country}${area}${punct}${end}/`;
+// console.log(all);
+
+const all = /^(1\s?)?(\([0-9]{3}\)|[0-9]{3})[\s\-]?[0-9]{3}[\s\-]?[0-9]{4}$/
+
+// const final = new RegExp(all);
+const final = all;
+
+
+
+checkBtn.addEventListener("click",(e)=>{
+  // alert(check())
+  output.innerHTML = check();
+})
+
+clear.addEventListener("click",(e)=>{
+  output.innerHTML = '';
+})
+
+** end of undefined **
+
+** start of undefined **
+
+
+
+** end of undefined **
+

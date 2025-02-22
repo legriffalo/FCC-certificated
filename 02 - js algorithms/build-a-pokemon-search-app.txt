@@ -1,0 +1,351 @@
+** start of undefined **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Pokedex API</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="./styles.css">
+
+<script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<style type= "text/tailwindcss">
+
+
+  :root {
+    --bg-img: url('https://i.etsystatic.com/9848756/r/il/b936ab/2963821242/il_570xN.2963821242_185n.jpg');
+    --primary:#53CEE7;
+    --secondary:#2555D4;
+    --banner:#E7292D;
+    --btnh:#E7292D;
+    --btn:#E7292D;
+    --tablecol:#FFFFFF;
+    --cellcol:#53CEE7;
+
+  }
+
+
+
+  .wrapper {
+    @apply h-screen text-gray-800 size-full 
+    flex items-center justify-center bg-repeat 
+    bg-[url:var(--bg-img)] text-xs;
+          }
+
+  .banner{
+  @apply fixed top-0 h-9/100 w-full flex justify-center
+   items-center text-white  bg-[color:var(--banner)] text-3xl font-bold
+    font-sans ;
+  
+  }
+  
+  .inner-div {
+    @apply w-85/100 h-80/100 border-solid bg-[color:var(--primary)]
+    rounded-4xl flex flex-col;
+  }
+
+      
+  .fw {
+  @apply block w-full h-7/10 flex items-center justify-center 
+  bg-transparent p-2 ;
+  }
+
+  .fw2{
+  @apply h-10/100;
+  } 
+
+
+  .input{
+    @apply h-full w-60/100 bg-gray-800 rounded-3xl text-gray-100 text-lg 
+    placeholder-white px-8;
+  }
+ 
+
+  .outputs{
+  @apply bg-[color:var(--secondary)] w-9/10 h-85/100 m-auto rounded-2xl p-5 flex flex-col items-center justify-center;
+  }
+
+  .outputs .table {
+  @apply  text-center bg-[color:var(--tablecol)] h-1/10 w-full table-fixed border border-separate border-gray-900 px-4 py-2 text-sm xl:text-base rounded-xl;
+  }
+
+ .outputs .table td {
+  @apply  bg-[color:var(--cellcol)] table-fixed border border-separate border-gray-900 w-1/2 ;
+  }
+
+#sprite-area{
+@apply min-h-5/10 min-w-1/2 border bg-white flex flex-row justify-center;
+}
+
+#top{
+@apply bg-white h-2/20 w-5/10 text-lg flex flex-row items-center my-2 border p-1; 
+}
+
+#top > div {
+ @apply min-w-1/2 h-full border px-2;
+ }
+
+#top > div >  span {
+ @apply h-full min-w-20 border text-red-900 mx-1 text-base;
+ }
+
+
+  .btn{
+  @apply h-full w-15/100 text-center rounded-xl 
+  text-white bg-[color:var(--btn)] hover:bg-[color:var(--btnh)] ml-2 p-0 font-bold text-lg;
+  }
+
+
+  .footer{
+  @apply fixed bottom-0 h-8/100 w-full flex items-center 
+  bg-[color:var(--banner)] text-white;
+  }
+
+  .footer > a {
+  @apply m-2
+  }
+
+    </style>
+
+
+</head>
+
+<body>
+<div id = "wrapper" class = "wrapper">
+  <div class = "banner">
+    <h1> Pokedex api </h1>
+  </div>
+
+
+  <div class = "inner-div">
+    <div id = "inputs" class = "fw fw2">
+      <input required id = "search-input" class = "input" placeholder = "search for pokemons">
+      </input>
+      <button id = "search-button" class = "btn"> Search </button>   
+    </div>
+
+    <div class ="outputs">
+      <div id = "top">
+        <div id = "basic-info" >
+          <span id = "pokemon-name" class = "font-bold">Name</span>
+          <span class = "font-bold" id = "pokemon-id">#No</span>
+        </div>
+
+        <div id = "basic-stats" >
+          <span id = "weight"> Weight </span>
+          <span id = "height"> Height </span>
+        </div>
+      </div>
+
+      <div id = "sprite-area">
+      </div>
+      <div id = "types" class = "fw fw2">
+      </div>
+
+      <div id = "main-stats" >
+        <table class = "table"> 
+        <tbody>
+          <tr>
+          <th>Base</th>
+          <th>Stats</th>
+          </tr>
+
+          <tr>
+            <td>HP:</td>
+            <td id="hp"></td>
+          </tr>
+
+          <tr>
+            <td>Attack:</td>
+            <td id="attack"></td>
+          </tr>
+
+          <tr>
+            <td>Defense:</td>
+            <td id="defense"></td>
+          </tr>
+
+          <tr>
+            <td>Sp. Attack:</td>
+            <td id="special-attack"></td>
+          </tr>
+
+          <tr>
+            <td>Sp. Defense:</td>
+            <td id="special-defense"></td>
+          </tr>
+
+          <tr>
+            <td>Speed:</td>
+            <td id="speed" ></td>
+          </tr>
+
+        </tbody>
+        </table>
+      </div>
+    </div>
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+  <div class = "footer">
+      <a href = 'https://github.com/legriffalo' target = "_blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+      <a href = 'https://www.linkedin.com/in/nick-griffiths-7b139198/' target = "_blank" >
+        <i class="fa-brands fa-linkedin-in"></i>
+      </a>
+
+  </div>
+
+
+</div>
+
+</body>
+<script src = "./script.js"></script>
+
+** end of undefined **
+
+** start of undefined **
+
+
+const pokemonURL = "https://pokeapi-proxy.freecodecamp.rocks/api/pokemon"
+let search = document.getElementById("search-input");
+let btn = document.getElementById("search-button");
+
+
+
+// const pokename = document.getElementById("pokemon-name");
+
+
+const targets = {
+  "name":document.getElementById("pokemon-name"),
+  "id":document.getElementById("pokemon-id"),
+  "weight":document.getElementById("weight"),
+  "height":document.getElementById("height"),
+  "sprite-area":document.getElementById("sprite-area"),
+
+  "sprite":document.getElementById("sprite"),
+  "types":document.getElementById("types"),
+  "hp":document.getElementById("hp"),
+  "attack":document.getElementById("attack"),
+  "defense":document.getElementById("defense"),
+  "special-attack":document.getElementById("special-attack"),
+  "special-defense":document.getElementById("special-defense"),
+  "speed":document.getElementById("speed")
+  
+}
+
+
+const renderData = (data, targets)=>{
+    // alert(targets["name"], data["name"]);
+    targets["name"].textContent = data["name"].toUpperCase();
+    targets["id"].textContent = `#${data["id"]}`;
+
+    targets["height"].textContent = `Height: ${data["height"]}`;
+    targets["weight"].textContent = `Weight: ${data["weight"]}`;
+    // targets["sprite-area"].textContent = JSON.stringify(data["sprites"]["front_shiny"]);
+    targets["sprite-area"].innerHTML = `<img id = "sprite" class = "h-full" src = "${data["sprites"]["front_default"]}">`;
+
+
+    targets["types"].innerHTML =
+     `<span class = "type ${data["types"][0]["type"]["name"]}">${data["types"][0]["type"]["name"].toUpperCase()} </span>`;
+     
+    data["types"][1]?
+    targets["types"].innerHTML += 
+    `<span class = "type ${data["types"][1]["type"]["name"]}">${data["types"][1]["type"]["name"].toUpperCase()} </span>`:null;
+
+    targets["hp"].textContent = data["stats"][0]["base_stat"];
+    targets["attack"].textContent = data["stats"][1]["base_stat"];
+    targets["defense"].textContent = data["stats"][2]["base_stat"];
+    targets["special-attack"].textContent = data["stats"][3]["base_stat"];
+    targets["special-defense"].textContent = data["stats"][4]["base_stat"];
+    targets["speed"].textContent = data["stats"][5]["base_stat"];
+
+    // targets["height"].textContent = data["height"];
+    // targets["height"].textContent = data["height"];
+   
+
+}
+
+
+const fetchData = async (search) => {
+  // alert(search)
+  try {
+    const res = await fetch(search);
+    const data = await res.json();
+    // alert(JSON.stringify(data));
+    console.log(data);
+    renderData(data, targets)
+  } catch (err) {
+    alert("Pokémon not found")
+    console.log(err);
+  }
+};
+
+
+const sendSearch = ()=>{
+  // make lower case
+  let pokemonSearch = `${pokemonURL}/${search.value.toLowerCase()}`
+  fetchData(pokemonSearch)
+}
+
+
+
+btn.addEventListener("click", ()=>{
+  sendSearch()
+})
+
+** end of undefined **
+
+** start of undefined **
+
+.type{
+  border-radius:10%;
+  margin:0 0.2vh 0 0.2vh ;
+  /* font-size:2em; */
+}
+
+.ghost{
+  background-color:purple;
+}
+
+.electric{
+  background-color:Yellow;
+}
+
+.grass{
+  background-color:green;
+}
+
+.psychic{
+  background-color:navy;
+}
+
+.fire{
+  background-color:orange;
+}
+
+.poison{
+  background-color:lime;
+}
+
+
+** end of undefined **
+

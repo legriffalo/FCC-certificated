@@ -1,0 +1,27 @@
+# intialise repo
+
+mkdir periodic_table
+cd periodic_table
+git init
+git branch -m main
+
+touch element.sh
+
+chmod +x element.sh
+
+
+#list branches
+branch -a
+
+
+
+
+# commit files first time 
+
+git add -A 
+git commit -m "Initial commit"
+
+
+# commit other times do x 5 
+git add -A 
+git commit -m "fix: "

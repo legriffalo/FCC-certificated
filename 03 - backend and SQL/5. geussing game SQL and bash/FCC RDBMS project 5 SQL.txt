@@ -1,0 +1,21 @@
+psql --username=freecodecamp --dbname=postgres
+
+
+CREATE DATABASE number_guess;
+
+CREATE TABLE users();
+
+ALTER TABLE users
+ADD COLUMN user_id SERIAL,
+ADD COLUMN username VARCHAR(20) NOT NULL
+ADD COLUMN games INT NOT NULL,
+ADD COLUMN best INT;
+
+ALTER TABLE users
+ADD PRIMARY KEY (user_id);
+
+ALTER TABLE users
+ADD COLUMN games INT NOT NULL,
+ADD COLUMN best INT;
+
+DELETE FROM users;
